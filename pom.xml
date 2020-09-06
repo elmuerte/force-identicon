@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.elmuerte.build</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.elmuerte</groupId>
+	<artifactId>force-identicon</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<name>Force Identicon</name>
+	<url>https://github.com/elmuerte/force-identicon</url>
+	<inceptionYear>2020</inceptionYear>
+
+	<developers>
+		<developer>
+			<name>Michiel Hendriks</name>
+			<email>maven+force-identicon@elmuerte.com</email>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/elmuerte/force-identicon.git</url>
+		<connection>scm:git:https://github.com/elmuerte/force-identicon.git</connection>
+		<developerConnection>scm:git:https://github.com/elmuerte/force-identicon.git</developerConnection>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/elmuerte/force-identicon/issues</url>
+	</issueManagement>
+
+	<ciManagement>
+		<system>TravisCI</system>
+		<url>https://travis-ci.org/elmuerte/force-identicon</url>
+	</ciManagement>
+
+	<properties>
+	</properties>
+
+	<build>
+		<pluginManagement>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.elmuerte.forceidenticon.Cli</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<reporting>
+	</reporting>
+
+	<dependencies>
+		<dependency>
+			<!-- Needed when the CLI is used -->
+			<groupId>info.picocli</groupId>
+			<artifactId>picocli</artifactId>
+			<version>4.5.1</version>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+</project>
